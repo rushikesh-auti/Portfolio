@@ -300,65 +300,73 @@ section h2 {
 
 /* Animate progress when visible */
 .fade-in.visible .progress {
-  width: inherit; /* uses inline style width */
+  width: inherit;
 }
 
 /* -------------------- Projects Section -------------------- */
-.project-grid {
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+#projects {
   padding: 0 20px 80px;
+  background: #f8fafc;
+  scroll-margin-top: 120px;
+}
+
+/* Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Each project card */
+/* Project Card */
 .project-card {
   background: #ffffff;
-  padding: 25px;
-  border-radius: 15px;
-  width: 320px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  padding: 24px 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   text-align: center;
-  cursor: default;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   user-select: none;
 }
 
+/* Hover Effect */
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.25);
 }
 
+/* Project Title */
 .project-card h3 {
-  color: #1e40af;
-  font-weight: 700;
-  margin-bottom: 12px;
   font-size: 1.4rem;
+  color: #1e40af;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
+/* Project Description */
 .project-card p {
   font-size: 1rem;
   color: #475569;
-  margin-bottom: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
+/* Project Links */
 .project-card a {
   display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #2563eb;
+  font-size: 0.95rem;
   font-weight: 600;
-  transition: color 0.3s ease;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .project-card a:hover {
   color: #1e40af;
+  transform: translateY(-2px);
 }
+
 
 /* -------------------- Contact Section -------------------- */
 #contact {
@@ -516,7 +524,6 @@ footer {
 
 @media (max-width: 480px) {
   .project-card {
-    max-width: 100%;
     padding: 20px;
   }
 
@@ -548,5 +555,11 @@ footer {
 
   .navbar {
     padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    gap: 24px;
   }
 }
