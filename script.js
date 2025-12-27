@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const fadeElems = document.querySelectorAll(".fade-in");
   const navbarHeight = navbar.offsetHeight;
 
-  // Toggle mobile menu
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
@@ -49,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScroll();
 });
 
-// Contact form
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 contactForm.addEventListener("submit", function (e) {
