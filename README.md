@@ -42,12 +42,14 @@ The design focuses on clarity, responsiveness, and user-friendly navigation.
 
 ## Project Structure
 
+```
 ├── index.html
 ├── style.css
 ├── script.js
 ├── image.jpg
 ├── Rushikesh_Auti_Resume.pdf
 └── README.md
+```
 
 ---
 
