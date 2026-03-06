@@ -24,7 +24,7 @@ This portfolio serves as a central place to present my technical skills, feature
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript 
 - Font Awesome
 - Google Fonts
 
@@ -40,6 +40,10 @@ portfolio/
 ├── Rushikesh_Auti_Resume.pdf
 └── README.md
 ```
+
+## Preview
+
+![Portfolio Screenshot](https://github.com/user-attachments/assets/63a18c97-7ce8-458a-870f-93abc2097716)
 
 ## Running the Project Locally
 
