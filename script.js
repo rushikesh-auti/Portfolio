@@ -52,7 +52,7 @@ const formMessage = document.getElementById("formMessage");
 contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Send email using EmailJS
+  // Send Email Using EmailJS
   emailjs.sendForm("service_kbcojdm", "template_0az5azs", this, "c4RHqWB7rEd08vDTT").then(
     function () {
       formMessage.textContent = "Message sent successfully!";
