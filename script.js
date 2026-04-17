@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 
-  // Smooth scroll
   navLinkItems.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
