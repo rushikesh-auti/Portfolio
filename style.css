@@ -1,3 +1,9 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #1e40af;
+  --text: #475569;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +20,8 @@ body {
   background-color: #f8fafc;
   color: #1f2937;
   min-height: 100vh;
+  padding-top: 80px;
+
 }
 
 .navbar {
