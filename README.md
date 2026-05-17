@@ -30,14 +30,28 @@ This portfolio serves as a central place to present my technical skills, feature
 
 ## Project Structure
 
+## Project Structure
+
 ```
-portfolio/
+Portfolio/
+│
+├── assets/
+│   ├── icons/
+│   │   └── favicon.png
+│   │
+│   ├── images/
+│   │   └── profile.jpg
+│   │
+│   └── resume/
+│       └── Rushikesh_Auti_Resume.pdf
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
 │
 ├── index.html
-├── style.css
-├── script.js
-├── image.jpg
-├── Rushikesh_Auti_Resume.pdf
 └── README.md
 ```
 
