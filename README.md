@@ -25,8 +25,6 @@ This portfolio serves as a central place to present my technical skills, feature
 - HTML5
 - CSS3
 - JavaScript 
-- Font Awesome
-- Google Fonts
 
 ## Project Structure
 
