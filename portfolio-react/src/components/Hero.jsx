@@ -1,5 +1,6 @@
 import profileImg from "../assets/images/profile.jpg";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
 
 export default function Hero() {
   return (
@@ -31,7 +32,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <a
-              href="/resume.pdf"
+              href={resume}
               target="_blank"
               rel="noreferrer"
               className="w-full rounded-xl bg-slate-950 px-6 py-3 text-center font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:shadow-md sm:w-auto"
