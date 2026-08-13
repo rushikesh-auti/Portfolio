@@ -1,4 +1,5 @@
 import { Download, Moon } from 'lucide-react';
+import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
 
 function Header() {
   return (
@@ -18,7 +19,8 @@ function Header() {
           </ul>
 
           <a
-            href="/resume.pdf"
+            href={resume}
+            download
             className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-medium text-white transition-colors hover:bg-slate-800"
           >
             <Download size={18} />
