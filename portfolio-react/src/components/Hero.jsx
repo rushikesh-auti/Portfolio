@@ -37,7 +37,7 @@ export default function Hero() {
               rel="noreferrer"
               className="w-full rounded-xl bg-slate-950 px-6 py-3 text-center font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:shadow-md sm:w-auto"
             >
-              Download Resume
+              View Resume
             </a>
 
             <a
