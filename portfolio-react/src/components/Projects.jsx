@@ -33,7 +33,7 @@ export default function Projects() {
         "Responsive calculator application built with React and CSS supporting arithmetic operations with a simple modern interface.",
       tech: ["React", "JavaScript", "CSS"],
       github: "https://github.com/rushikesh-auti/Calculator",
-      live: "https://calculator-rushikesh.vercel.app/",
+      live: "https://calculator-react-72.vercel.app/",
     },
     {
       title: "Social Media Interface",
