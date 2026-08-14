@@ -4,15 +4,18 @@ import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
 
 export default function Hero() {
   return (
-    <section id="home" className="scroll-mt-20 flex min-h-screen items-start pt-6 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20">
-      <div className="grid w-full items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
+    <section
+      id="home"
+      className="scroll-mt-20 flex min-h-screen items-start pt-28 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20"
+    >
+      <div className="grid w-full items-center gap-14 sm:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="relative lg:-translate-y-4 xl:-translate-y-6">
             <div className="absolute inset-0 rounded-full bg-slate-200 blur-3xl opacity-60"></div>
             <img
               src={profileImg}
               alt="Rushikesh Auti"
-              className="relative h-60 w-60 rounded-full border-4 border-white object-cover shadow-2xl sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-85 lg:w-85 xl:h-95 xl:w-95"
+              className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-85 lg:w-85 xl:h-95 xl:w-95"
             />
           </div>
         </div>
