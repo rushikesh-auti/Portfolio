@@ -4,7 +4,7 @@ import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <a href="#home" className="text-2xl font-semibold text-slate-900">
           Rushikesh Auti
         </a>

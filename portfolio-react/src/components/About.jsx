@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-24 py-14 sm:py-16">
+    <section id="about" className="scroll-mt-20 py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">

@@ -7,7 +7,7 @@ import {
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 py-16 sm:py-20">
+    <section id="contact" className="scroll-mt-20 py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
@@ -17,12 +17,6 @@ export default function Contact() {
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
             Let’s work together
           </h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            I’m currently open to internships, entry-level opportunities, and
-            freelance projects. Feel free to reach out if you’d like to discuss
-            a project, collaboration, or job opportunity.
-          </p>
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">

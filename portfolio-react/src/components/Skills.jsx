@@ -43,10 +43,8 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="scroll-mt-24 py-14 sm:py-16">
+    <section id="skills" className="scroll-mt-20 py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-        {/* Header */}
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
             Skills
@@ -57,16 +55,13 @@ export default function Skills() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            Technologies and tools I use to build modern, responsive, and
-            scalable web applications.
+            I have hands-on experience with the technologies and tools listed
+            below.
           </p>
         </div>
 
-        {/* Single Compact Card */}
         <div className="mx-auto mt-10 max-w-5xl rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6 lg:p-8">
-
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-
             {skills.map((skill) => {
               const Icon = skill.icon;
 
@@ -81,7 +76,6 @@ export default function Skills() {
                     hover:bg-white hover:shadow-sm
                   "
                 >
-                  {/* Icon */}
                   <div
                     className="
                       flex h-9 w-9 shrink-0 items-center justify-center
@@ -91,17 +85,14 @@ export default function Skills() {
                     <Icon size={18} />
                   </div>
 
-                  {/* Name */}
                   <span className="text-sm font-medium text-slate-700">
                     {skill.name}
                   </span>
                 </div>
               );
             })}
-
           </div>
         </div>
-
       </div>
     </section>
   );
