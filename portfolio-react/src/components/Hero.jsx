@@ -4,7 +4,7 @@ import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-start pt-6 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20">
+    <section id="home" className="scroll-mt-20 flex min-h-screen items-start pt-6 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20">
       <div className="grid w-full items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="relative lg:-translate-y-4 xl:-translate-y-6">
