@@ -19,21 +19,21 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="mt-12 grid gap-8 lg:mt-6 lg:grid-cols-2">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:p-6">
             <h3 className="text-xl font-semibold text-slate-950">
               Get in touch
             </h3>
 
-            <p className="mt-4 leading-7 text-slate-600">
+            <p className="mt-4 leading-7 text-slate-600 lg:mt-2 lg:leading-6">
               I’d love to hear from you. The fastest way to reach me is through
               email or LinkedIn.
             </p>
 
-            <div className="mt-8 space-y-5">
+            <div className="mt-8 space-y-5 lg:mt-4 lg:space-y-3">
               <a
                 href="mailto:autirushikesh758@gmail.com"
-                className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50"
+                className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 lg:gap-3 lg:p-3"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition-colors duration-300 group-hover:bg-slate-900 group-hover:text-white">
                   <FaEnvelope size={20} />
@@ -51,7 +51,7 @@ export default function Contact() {
                 href="https://linkedin.com/in/rushikesh-auti"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50"
+                className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 lg:gap-3 lg:p-3"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition-colors duration-300 group-hover:bg-slate-900 group-hover:text-white">
                   <FaLinkedin size={20} />
@@ -69,7 +69,7 @@ export default function Contact() {
                 href="https://github.com/rushikesh-auti"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50"
+                className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 lg:gap-3 lg:p-3"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition-colors duration-300 group-hover:bg-slate-900 group-hover:text-white">
                   <FaGithub size={20} />
@@ -83,7 +83,7 @@ export default function Contact() {
                 </div>
               </a>
 
-              <div className="flex items-start gap-4 rounded-2xl border border-slate-200 p-4">
+              <div className="flex items-start gap-4 rounded-2xl border border-slate-200 p-4 lg:gap-3 lg:p-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
                   <FaMapMarkerAlt size={20} />
                 </div>
@@ -98,16 +98,16 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:p-6">
             <h3 className="text-xl font-semibold text-slate-950">
               Send a message
             </h3>
 
-            <form className="mt-6 space-y-5">
+            <form className="mt-6 space-y-5 lg:mt-4 lg:space-y-3">
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-2 block text-sm font-medium text-slate-700"
+                  className="mb-2 block text-sm font-medium text-slate-700 lg:mb-1"
                 >
                   Full Name
                 </label>
@@ -116,14 +116,14 @@ export default function Contact() {
                   id="name"
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition-colors focus:border-slate-900"
+                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition-colors focus:border-slate-900 lg:py-2"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-slate-700"
+                  className="mb-2 block text-sm font-medium text-slate-700 lg:mb-1"
                 >
                   Email Address
                 </label>
@@ -132,29 +132,29 @@ export default function Contact() {
                   id="email"
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition-colors focus:border-slate-900"
+                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition-colors focus:border-slate-900 lg:py-2"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-slate-700"
+                  className="mb-2 block text-sm font-medium text-slate-700 lg:mb-1"
                 >
                   Message
                 </label>
 
                 <textarea
                   id="message"
-                  rows="5"
+                  rows="4"
                   placeholder="Write your message..."
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition-colors focus:border-slate-900"
+                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition-colors focus:border-slate-900 lg:py-2"
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center rounded-xl bg-slate-950 px-6 py-3 font-medium text-white transition-colors hover:bg-slate-800"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-slate-950 px-6 py-3 font-medium text-white transition-colors hover:bg-slate-800 lg:py-2"
               >
                 Send Message
               </button>
