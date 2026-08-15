@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+/* Shared slate-palette mappings keep existing cards, badges, and text readable. */
+:root.dark .bg-white,
+:root.dark .bg-slate-50 {
+  background-color: var(--color-slate-900);
+}
+
+:root.dark .bg-slate-100 {
+  background-color: var(--color-slate-800);
+}
+
+:root.dark .bg-slate-950 {
+  background-color: var(--color-slate-50);
+}
+
+:root.dark .bg-slate-950.text-white {
+  color: var(--color-slate-950);
+}
+
+:root.dark .text-slate-950 {
+  color: var(--color-slate-50);
+}
+
+:root.dark .text-slate-900 {
+  color: var(--color-slate-100);
+}
+
+:root.dark .text-slate-700 {
+  color: var(--color-slate-300);
+}
+
+:root.dark .text-slate-600,
+:root.dark .text-slate-500 {
+  color: var(--color-slate-400);
+}
+
+:root.dark .border-slate-200,
+:root.dark .border-slate-300 {
+  border-color: var(--color-slate-700);
+}
+
+:root.dark .hover\:bg-slate-100:hover,
+:root.dark .hover\:bg-slate-50:hover {
+  background-color: var(--color-slate-800);
+}
+
+:root.dark .hover\:bg-slate-800:hover {
+  background-color: var(--color-slate-200);
+}
+
+:root.dark .hover\:border-slate-300:hover,
+:root.dark .hover\:border-slate-400:hover {
+  border-color: var(--color-slate-600);
+}
+
+:root.dark .hover\:text-slate-900:hover {
+  color: var(--color-slate-50);
+}
