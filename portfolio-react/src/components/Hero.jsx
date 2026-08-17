@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="scroll-mt-20 flex min-h-screen items-start pt-28 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20"
+      className="relative scroll-mt-20 flex min-h-screen items-start pt-28 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20"
     >
       <div className="grid w-full items-center gap-14 sm:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
@@ -15,7 +15,7 @@ export default function Hero() {
             <img
               src={profileImg}
               alt="Rushikesh Auti"
-              className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-85 lg:w-85 xl:h-95 xl:w-95"
+              className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl dark:border-zinc-800 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-85 lg:w-85 xl:h-95 xl:w-95"
             />
           </div>
         </div>
