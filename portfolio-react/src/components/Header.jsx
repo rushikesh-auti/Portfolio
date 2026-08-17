@@ -6,7 +6,7 @@ function Header({ isDark, onThemeToggle }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 shadow-sm backdrop-blur-md transition-colors dark:border-slate-800 dark:bg-slate-950/80">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 shadow-sm backdrop-blur-md transition-colors dark:border-zinc-800 dark:bg-[#0a0a0a]/90">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#home" className="text-2xl font-bold text-slate-900 dark:text-white">
           Rushikesh Auti
@@ -59,7 +59,7 @@ function Header({ isDark, onThemeToggle }) {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-sm dark:border-slate-800 dark:bg-slate-950 md:hidden">
+        <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-sm dark:border-zinc-800 dark:bg-[#0a0a0a] md:hidden">
           <div className="flex flex-col gap-2">
             <a
               href="#home"
