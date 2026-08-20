@@ -4,7 +4,7 @@ A responsive personal portfolio website built to showcase my skills, projects, a
 
 ## Live Demo
 
-https://portfoliorushiz.vercel.app/
+https://portfoliorushiz.vercel.app
 
 ## Overview
 
