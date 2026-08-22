@@ -27,7 +27,7 @@ export default function Contact() {
         formRef.current,
         {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        }
+        },
       );
 
       setStatus("success");
@@ -48,30 +48,23 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-            Contact
-          </p>
-
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl">
             Let’s work together
           </h2>
         </div>
 
-        {/* Main Content */}
         <div className="mt-12 grid gap-8 lg:mt-6 lg:grid-cols-2">
-          {/* Contact Information */}
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-colors dark:border-zinc-800 dark:bg-[#111111] sm:p-8 lg:p-6">
             <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
               Get in touch
             </h3>
 
             <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400 lg:mt-2 lg:leading-6">
-              I’d love to hear from you. The fastest way to reach me is
-              through email or LinkedIn.
+              I’d love to hear from you. The fastest way to reach me is through
+              email or LinkedIn.
             </p>
 
             <div className="mt-8 space-y-5 lg:mt-4 lg:space-y-3">
-              {/* Email */}
               <a
                 href="mailto:autirushikesh758@gmail.com"
                 className="group flex items-start gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 lg:gap-3 lg:p-3"
@@ -91,7 +84,6 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* LinkedIn */}
               <a
                 href="https://linkedin.com/in/rushikesh-auti"
                 target="_blank"
@@ -113,7 +105,6 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* GitHub */}
               <a
                 href="https://github.com/rushikesh-auti"
                 target="_blank"
@@ -135,7 +126,6 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* Location */}
               <div className="flex items-start gap-4 rounded-2xl border border-slate-200 p-4 dark:border-zinc-800 lg:gap-3 lg:p-3">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700 dark:bg-zinc-800 dark:text-slate-300">
                   <FaMapMarkerAlt size={20} />
@@ -154,7 +144,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-colors dark:border-zinc-800 dark:bg-[#111111] sm:p-8 lg:p-6">
             <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
               Send a message
@@ -165,7 +154,6 @@ export default function Contact() {
               onSubmit={sendEmail}
               className="mt-6 space-y-5 lg:mt-4 lg:space-y-3"
             >
-              {/* Name */}
               <div>
                 <label
                   htmlFor="name"
@@ -185,7 +173,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <label
                   htmlFor="email"
@@ -205,7 +192,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Subject */}
               <div>
                 <label
                   htmlFor="subject"
@@ -224,7 +210,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Message */}
               <div>
                 <label
                   htmlFor="message"
@@ -242,8 +227,6 @@ export default function Contact() {
                   className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2"
                 />
               </div>
-
-              {/* Status */}
               {status === "success" && (
                 <div
                   role="status"
@@ -258,12 +241,11 @@ export default function Contact() {
                   role="alert"
                   className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700 dark:border-red-900 dark:bg-red-950/40 dark:text-red-400"
                 >
-                  Something went wrong. Please try again or contact me
-                  directly by email.
+                  Something went wrong. Please try again or contact me directly
+                  by email.
                 </div>
               )}
 
-              {/* Submit */}
               <button
                 type="submit"
                 disabled={isSending}
