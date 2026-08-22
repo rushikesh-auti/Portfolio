@@ -1,10 +1,9 @@
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-20 py-6 sm:py-8">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="about" className="scroll-mt-15 py-10 sm:py-12 lg:py-16">
+      <div>
         <div className="text-center">
-          
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
             Building modern web experiences
           </h2>
 

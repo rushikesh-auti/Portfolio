@@ -88,10 +88,9 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="scroll-mt-20 py-6 sm:py-8">
+    <section id="skills" className="scroll-mt-15 py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
-
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
             Technical Skills
           </h2>
