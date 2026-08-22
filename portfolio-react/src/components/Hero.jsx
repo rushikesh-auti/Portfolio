@@ -73,7 +73,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:autirushikesh758@gmail.com"
               className="rounded-full border border-slate-200 p-3 text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 hover:shadow-sm"
               aria-label="Email"
             >

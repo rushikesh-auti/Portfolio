@@ -13,30 +13,66 @@ export default function Contact() {
 
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = (formData) => {
+    const newErrors = {};
+
+    if (!formData.name || !formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email || !formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email address is invalid";
+    }
+
+    if (!formData.subject || !formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    }
+
+    if (!formData.message || !formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+
+    return newErrors;
+  };
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    setIsSending(true);
-    setStatus("");
+    const formData = new FormData(formRef.current);
+    const data = Object.fromEntries(formData);
 
-    try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        },
-      );
+    const validationErrors = validateForm(data);
+    setErrors(validationErrors);
 
-      setStatus("success");
-      formRef.current.reset();
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-      setStatus("error");
-    } finally {
-      setIsSending(false);
+    if (Object.keys(validationErrors).length === 0) {
+      setIsSending(true);
+      setStatus("");
+
+      try {
+        await emailjs.sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          {
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          },
+        );
+
+        setStatus("success");
+        formRef.current.reset();
+        setErrors({}); // Clear errors on success
+      } catch (error) {
+        console.error("EmailJS Error:", error);
+        setStatus("error");
+      } finally {
+        setIsSending(false);
+      }
     }
   };
 
@@ -169,8 +205,21 @@ export default function Contact() {
                   placeholder="Enter your name"
                   required
                   autoComplete="name"
-                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2"
+                  className={`w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2 ${
+                    errors.name ? "border-red-500" : ""
+                  }`}
+                  aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "name-error" : undefined}
                 />
+                {errors.name && (
+                  <p
+                    id="name-error"
+                    className="mt-1 text-sm text-red-600 dark:text-red-400"
+                    role="alert"
+                  >
+                    {errors.name}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -188,8 +237,21 @@ export default function Contact() {
                   placeholder="Enter your email"
                   required
                   autoComplete="email"
-                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2"
+                  className={`w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2 ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
+                  aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "email-error" : undefined}
                 />
+                {errors.email && (
+                  <p
+                    id="email-error"
+                    className="mt-1 text-sm text-red-600 dark:text-red-400"
+                    role="alert"
+                  >
+                    {errors.email}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -206,8 +268,21 @@ export default function Contact() {
                   type="text"
                   placeholder="Enter subject"
                   required
-                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2"
+                  className={`w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2 ${
+                    errors.subject ? "border-red-500" : ""
+                  }`}
+                  aria-invalid={!!errors.subject}
+                  aria-describedby={errors.subject ? "subject-error" : undefined}
                 />
+                {errors.subject && (
+                  <p
+                    id="subject-error"
+                    className="mt-1 text-sm text-red-600 dark:text-red-400"
+                    role="alert"
+                  >
+                    {errors.subject}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -224,13 +299,27 @@ export default function Contact() {
                   rows="4"
                   placeholder="Write your message..."
                   required
-                  className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2"
+                  className={`w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-white lg:py-2 ${
+                    errors.message ? "border-red-500" : ""
+                  }`}
+                  aria-invalid={!!errors.message}
+                  aria-describedby={errors.message ? "message-error" : undefined}
                 />
+                {errors.message && (
+                  <p
+                    id="message-error"
+                    className="mt-1 text-sm text-red-600 dark:text-red-400"
+                    role="alert"
+                  >
+                    {errors.message}
+                  </p>
+                )}
               </div>
               {status === "success" && (
                 <div
                   role="status"
                   className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-400"
+                  aria-live="polite"
                 >
                   Message sent successfully! I’ll get back to you soon.
                 </div>
@@ -240,6 +329,7 @@ export default function Contact() {
                 <div
                   role="alert"
                   className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700 dark:border-red-900 dark:bg-red-950/40 dark:text-red-400"
+                  aria-live="assertive"
                 >
                   Something went wrong. Please try again or contact me directly
                   by email.

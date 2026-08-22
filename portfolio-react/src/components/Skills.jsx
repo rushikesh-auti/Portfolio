@@ -14,7 +14,6 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-import { TbBrandCSharp } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 
 import {
@@ -35,7 +34,7 @@ export default function Skills() {
       title: "Programming Languages",
       icon: FaCode,
       skills: [
-        { name: "C Programming", icon: TbBrandCSharp },
+        { name: "C Programming", icon: FaCode },
         { name: "JavaScript", icon: FaJs },
       ],
     },
