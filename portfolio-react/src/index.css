@@ -11,7 +11,6 @@
   background-color: #0a0a0a;
 }
 
-/* Neutral near-black theme inspired by a studio-style developer portfolio. */
 :root.dark #home {
   isolation: isolate;
 }
@@ -25,9 +24,18 @@
   width: 100vw;
   content: "";
   transform: translateX(-50%);
+
   background:
-    radial-gradient(ellipse at 52% 32%, rgb(255 255 255 / 0.045), transparent 42%),
-    radial-gradient(ellipse at 10% 12%, rgb(255 255 255 / 0.025), transparent 26%);
+    radial-gradient(
+      ellipse at 52% 32%,
+      rgb(255 255 255 / 0.045),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 10% 12%,
+      rgb(255 255 255 / 0.025),
+      transparent 26%
+    );
 }
 
 :root.dark .bg-white,
@@ -73,8 +81,8 @@
   border-color: #2b2b2b;
 }
 
-:root.dark .hover\:bg-slate-100:hover,
-:root.dark .hover\:bg-slate-50:hover {
+:root.dark .hover\:bg-slate-50:hover,
+:root.dark .hover\:bg-slate-100:hover {
   background-color: #1a1a1a;
 }
 
