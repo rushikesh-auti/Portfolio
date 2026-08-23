@@ -3,56 +3,63 @@ import { FiExternalLink } from "react-icons/fi";
 
 export default function Projects() {
   const projects = [
-    {
-      title: "StayFinder",
-      description:
-        "Full-stack property rental platform with authentication, property management, booking system, Razorpay payments, Cloudinary uploads, favourites, and a responsive UI.",
-      tech: ["Node.js", "Express", "MongoDB", "EJS", "Razorpay"],
-      github: "https://github.com/rushikesh-auti/StayFinder",
-      live: "https://stayfinder-m131.onrender.com/",
-    },
-    {
-      title: "StyleKart",
-      description:
-        "Fashion e-commerce application featuring dynamic product management, Redux state management, RESTful APIs, and MongoDB integration.",
-      tech: ["React", "Redux", "Node.js", "Express", "MongoDB"],
-      github: "https://github.com/rushikesh-auti/StyleKart",
-      live: "https://stylekart-store.vercel.app/",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "Full-stack task management application with CRUD operations, REST APIs, MongoDB integration, and a responsive Tailwind CSS interface.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/rushikesh-auti/Task-Management-Application",
-      live: "https://task-management-application-rushi.vercel.app/",
-    },
-    {
-      title: "Calculator",
-      description:
-        "Responsive calculator application built with React and CSS supporting arithmetic operations with a simple modern interface.",
-      tech: ["React", "JavaScript", "CSS"],
-      github: "https://github.com/rushikesh-auti/Calculator",
-      live: "https://calculator-react-72.vercel.app/",
-    },
-    {
-      title: "Social Media Interface",
-      description:
-        "Responsive social media interface built with React where users can view posts, create posts, and interact with content through a clean UI.",
-      tech: ["React", "JavaScript", "CSS"],
-      github: "https://github.com/rushikesh-auti/Social-Media-Interface",
-      // live: "",
-    },
-    {
-      title: "Web Music Player",
-      description:
-        "Responsive web music player with audio controls, progress bar, playlist interface, and a clean modern user experience.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/rushikesh-auti/Web-Music-Player",
-      // live: "",
-    },
-  ];
-
+  {
+    title: "StayFinder",
+    description:
+      "Full-stack property rental platform with authentication, property management, booking system, Razorpay payments, Cloudinary uploads, favourites, and a responsive UI.",
+    tech: ["Node.js", "Express", "MongoDB", "EJS", "Razorpay"],
+    github: "https://github.com/rushikesh-auti/StayFinder",
+    live: "https://stayfinder-m131.onrender.com/",
+  },
+  {
+    title: "AI Prompt Library",
+    description:
+      "Modern React and TypeScript application for creating, organizing, searching, and managing reusable AI prompts with CRUD operations, favorites, pinning, categories, filtering, and drag-and-drop reordering.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "React Hook Form",
+      "dnd-kit",
+    ],
+    github: "https://github.com/rushikesh-auti/ai-prompt-library",
+    live: "my-ai-prompt-library.vercel.app",
+  },
+  {
+    title: "StyleKart",
+    description:
+      "Fashion e-commerce application featuring dynamic product management, Redux state management, RESTful APIs, and MongoDB integration.",
+    tech: ["React", "Redux", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/rushikesh-auti/StyleKart",
+    live: "https://stylekart-store.vercel.app/",
+  },
+  {
+    title: "Task Management App",
+    description:
+      "Full-stack task management application with CRUD operations, REST APIs, MongoDB integration, and a responsive Tailwind CSS interface.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    github:
+      "https://github.com/rushikesh-auti/Task-Management-Application",
+    live: "https://task-management-application-rushi.vercel.app/",
+  },
+  {
+    title: "Calculator",
+    description:
+      "Responsive calculator application built with React and CSS supporting arithmetic operations with a simple modern interface.",
+    tech: ["React", "JavaScript", "CSS"],
+    github: "https://github.com/rushikesh-auti/Calculator",
+    live: "https://calculator-react-72.vercel.app/",
+  },
+  {
+    title: "Social Media Interface",
+    description:
+      "Responsive social media interface built with React where users can view posts, create posts, and interact with content through a clean UI.",
+    tech: ["React", "JavaScript", "CSS"],
+    github:
+      "https://github.com/rushikesh-auti/Social-Media-Interface",
+  },
+];
   return (
     <section id="projects" className="scroll-mt-15 py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
