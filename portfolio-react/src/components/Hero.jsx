@@ -24,7 +24,7 @@ export default function Hero() {
               height="380"
               fetchPriority="high"
               decoding="async"
-              className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl dark:border-zinc-800 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-[340px] lg:w-[340px] xl:h-[380px] xl:w-[380px]"
+              className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl dark:border-zinc-800 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-85 lg:w-85 xl:h-95 xl:w-95"
             />
           </div>
         </div>
