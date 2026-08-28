@@ -152,5 +152,3 @@ The project uses the following environment variables for EmailJS:
 | `VITE_EMAILJS_SERVICE_ID`  | EmailJS service ID  |
 | `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
 | `VITE_EMAILJS_PUBLIC_KEY`  | EmailJS public key  |
-
-
