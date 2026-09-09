@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
 
-Sitemap: https://portfoliorushiz.vercel.app/sitemap.xml
+Sitemap: https://rushikeshauti.vercel.app/sitemap.xml

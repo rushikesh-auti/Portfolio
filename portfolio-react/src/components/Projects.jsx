@@ -61,11 +61,18 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="scroll-mt-15 py-6 sm:py-8">
+    <section
+      id="projects"
+      aria-labelledby="projects-title"
+      className="scroll-mt-15 py-6 sm:py-8"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+          <h2
+            id="projects-title"
+            className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
+          >
             Featured Work
           </h2>
 

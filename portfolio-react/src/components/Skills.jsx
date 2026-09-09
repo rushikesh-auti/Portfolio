@@ -88,10 +88,17 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="scroll-mt-15 py-6 sm:py-8">
+    <section
+      id="skills"
+      aria-labelledby="skills-title"
+      className="scroll-mt-15 py-6 sm:py-8"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+          <h2
+            id="skills-title"
+            className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
+          >
             Technical Skills
           </h2>
 
@@ -106,7 +113,7 @@ export default function Skills() {
             const GroupIcon = group.icon;
 
             return (
-              <div
+              <article
                 key={group.title}
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg sm:p-8"
               >
@@ -135,7 +142,7 @@ export default function Skills() {
                     );
                   })}
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

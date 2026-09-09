@@ -79,12 +79,16 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      aria-labelledby="contact-title"
       className="scroll-mt-15 py-6 transition-colors sm:py-8"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl">
+          <h2
+            id="contact-title"
+            className="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+          >
             Let’s work together
           </h2>
         </div>
@@ -272,7 +276,9 @@ export default function Contact() {
                     errors.subject ? "border-red-500" : ""
                   }`}
                   aria-invalid={!!errors.subject}
-                  aria-describedby={errors.subject ? "subject-error" : undefined}
+                  aria-describedby={
+                    errors.subject ? "subject-error" : undefined
+                  }
                 />
                 {errors.subject && (
                   <p
@@ -303,7 +309,9 @@ export default function Contact() {
                     errors.message ? "border-red-500" : ""
                   }`}
                   aria-invalid={!!errors.message}
-                  aria-describedby={errors.message ? "message-error" : undefined}
+                  aria-describedby={
+                    errors.message ? "message-error" : undefined
+                  }
                 />
                 {errors.message && (
                   <p

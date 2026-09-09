@@ -1,9 +1,16 @@
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-15 py-10 sm:py-12 lg:py-16">
+    <section
+      id="about"
+      aria-labelledby="about-title"
+      className="scroll-mt-15 py-10 sm:py-12 lg:py-16"
+    >
       <div>
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+          <h2
+            id="about-title"
+            className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
+          >
             Building modern web experiences
           </h2>
 
@@ -15,7 +22,7 @@ export default function About() {
         </div>
 
         <div className="mt-14 grid items-stretch gap-8 lg:grid-cols-2">
-          <div
+          <article
             className="
               rounded-3xl border border-slate-200 bg-white p-6 shadow-sm
               transition-all duration-300 ease-out
@@ -51,9 +58,9 @@ export default function About() {
               experienced developers, and grow as a professional software
               engineer.
             </p>
-          </div>
+          </article>
 
-          <div
+          <article
             className="
               rounded-3xl border border-slate-200 bg-white p-6 shadow-sm
               transition-all duration-300 ease-out
@@ -92,7 +99,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>

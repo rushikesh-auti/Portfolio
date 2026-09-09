@@ -42,13 +42,13 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-3 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg md:text-xl md:leading-8 lg:mx-0">
-            A passionate{" "}
+            A passionate Software Developer and React Developer in Pune, India,
+            I{" "}
             <strong className="font-semibold text-slate-900 dark:text-slate-200">
-              Full Stack Developer
+              build responsive web applications
             </strong>{" "}
-            who builds responsive and scalable web applications using React,
-            Node.js, Express, and MongoDB. I focus on clean UI, performance,
-            accessibility, and maintainable code.
+            using React, JavaScript, Node.js, Express, and MongoDB. I focus on
+            clean UI, performance, accessibility, and maintainable code.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
