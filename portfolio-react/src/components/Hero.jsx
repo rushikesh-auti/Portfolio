@@ -1,5 +1,6 @@
 import profileImg from "../assets/images/profile.jpg";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
 
 export default function Hero() {
@@ -7,32 +8,26 @@ export default function Hero() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="relative flex min-h-screen scroll-mt-20 items-start pt-28 pb-10 sm:pt-10 sm:pb-14 lg:pt-16 lg:pb-20"
+      className="relative flex min-h-[calc(100vh-4.5rem)] scroll-mt-15 items-center overflow-hidden py-16 sm:py-16 lg:py-16"
     >
-      <div className="grid w-full items-center gap-14 sm:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
-        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-          <div className="relative lg:-translate-y-4 xl:-translate-y-6">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 rounded-full bg-slate-200 blur-3xl opacity-60 dark:bg-zinc-800"
-            />
-
-            <img
-              src={profileImg}
-              alt="Rushikesh Auti - Full Stack Developer"
-              width="380"
-              height="380"
-              fetchPriority="high"
-              decoding="async"
-              className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl dark:border-zinc-800 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-85 lg:w-85 xl:h-95 xl:w-95"
-            />
-          </div>
-        </div>
-
+      <div className="section-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 xl:gap-20">
+        {/* Content */}
         <div className="order-2 text-center lg:order-1 lg:text-left">
+          {/* Availability badge */}
+          <div className="flex justify-center lg:justify-start">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm dark:border-zinc-700 dark:bg-zinc-900 dark:text-slate-300 sm:text-sm">
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 animate-pulse rounded-full bg-green-500"
+              />
+              Open to opportunities
+            </span>
+          </div>
+
+          {/* Heading */}
           <h1
             id="hero-title"
-            className="text-4xl font-bold leading-tight tracking-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl lg:text-[64px] xl:text-[72px]"
+            className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl lg:text-[64px]"
           >
             Hi, I'm
             <br />
@@ -41,38 +36,56 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-3 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg md:text-xl md:leading-8 lg:mx-0">
-            A passionate Software Developer and React Developer in Pune, India,
-            I{" "}
+          {/* Role */}
+          <div className="mt-5">
+            <p className="text-lg font-semibold text-slate-700 dark:text-slate-300 sm:text-xl md:text-2xl">
+              Full Stack Developer
+            </p>
+
+            <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-500 sm:text-base">
+              React.js · Node.js · Express.js · MongoDB
+            </p>
+          </div>
+
+          {/* Description */}
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg sm:leading-8 lg:mx-0">
+            I build{" "}
             <strong className="font-semibold text-slate-900 dark:text-slate-200">
-              build responsive web applications
+              responsive and user-focused web applications
             </strong>{" "}
-            using React, JavaScript, Node.js, Express, and MongoDB. I focus on
-            clean UI, performance, accessibility, and maintainable code.
+            with modern technologies. I focus on clean UI, reliable backend
+            systems, performance, accessibility, and maintainable code.
           </p>
 
+          {/* CTA Buttons */}
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
-            <a
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View Rushikesh Auti's resume"
-              className="w-full rounded-xl bg-slate-950 px-6 py-3 text-center font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:shadow-md dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
-            >
-              View Resume
-            </a>
-
             <a
               href="#projects"
               aria-label="View Rushikesh Auti's projects"
-              className="w-full rounded-xl border border-slate-300 px-6 py-3 text-center font-medium text-slate-700 transition-all duration-300 hover:border-slate-400 hover:bg-slate-100 dark:border-zinc-700 dark:text-slate-300 dark:hover:border-zinc-600 dark:hover:bg-zinc-900 dark:hover:text-white sm:w-auto"
+              className="btn-primary w-full sm:w-auto"
             >
-              Explore Projects
+              View Projects
+              <FaArrowDown
+                size={13}
+                aria-hidden="true"
+                className="-rotate-90"
+              />
+            </a>
+
+            <a
+              href={resume}
+              download
+              aria-label="Download Rushikesh Auti's resume"
+              className="btn-secondary w-full sm:w-auto"
+            >
+              Download Resume
+              <FiExternalLink size={16} aria-hidden="true" />
             </a>
           </div>
 
+          {/* Social Links */}
           <div
-            className="mt-8 flex justify-center gap-4 lg:justify-start"
+            className="mt-8 flex justify-center gap-3 lg:justify-start"
             aria-label="Social links"
           >
             <a
@@ -80,9 +93,24 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Rushikesh Auti's GitHub profile"
-              className="rounded-full border border-slate-200 p-3 text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 hover:shadow-sm dark:border-zinc-700 dark:text-slate-300 dark:hover:bg-zinc-900 dark:hover:text-white"
+              className="
+                flex h-11 w-11 items-center justify-center
+                rounded-full border border-slate-200
+                bg-white text-slate-700
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:border-slate-300
+                hover:bg-slate-950
+                hover:text-white
+                hover:shadow-md
+                dark:border-zinc-700
+                dark:bg-zinc-900
+                dark:text-slate-300
+                dark:hover:bg-white
+                dark:hover:text-slate-950
+              "
             >
-              <FaGithub size={20} aria-hidden="true" />
+              <FaGithub size={19} aria-hidden="true" />
             </a>
 
             <a
@@ -90,18 +118,106 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Rushikesh Auti's LinkedIn profile"
-              className="rounded-full border border-slate-200 p-3 text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 hover:shadow-sm dark:border-zinc-700 dark:text-slate-300 dark:hover:bg-zinc-900 dark:hover:text-white"
+              className="
+                flex h-11 w-11 items-center justify-center
+                rounded-full border border-slate-200
+                bg-white text-slate-700
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:border-slate-300
+                hover:bg-slate-950
+                hover:text-white
+                hover:shadow-md
+                dark:border-zinc-700
+                dark:bg-zinc-900
+                dark:text-slate-300
+                dark:hover:bg-white
+                dark:hover:text-slate-950
+              "
             >
-              <FaLinkedin size={20} aria-hidden="true" />
+              <FaLinkedin size={19} aria-hidden="true" />
             </a>
 
             <a
               href="mailto:autirushikesh758@gmail.com"
               aria-label="Send an email to Rushikesh Auti"
-              className="rounded-full border border-slate-200 p-3 text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 hover:shadow-sm dark:border-zinc-700 dark:text-slate-300 dark:hover:bg-zinc-900 dark:hover:text-white"
+              className="
+                flex h-11 w-11 items-center justify-center
+                rounded-full border border-slate-200
+                bg-white text-slate-700
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:border-slate-300
+                hover:bg-slate-950
+                hover:text-white
+                hover:shadow-md
+                dark:border-zinc-700
+                dark:bg-zinc-900
+                dark:text-slate-300
+                dark:hover:bg-white
+                dark:hover:text-slate-950
+              "
             >
-              <FaEnvelope size={20} aria-hidden="true" />
+              <FaEnvelope size={18} aria-hidden="true" />
             </a>
+          </div>
+        </div>
+
+        {/* Profile Image */}
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+          <div className="relative">
+            {/* Outer glow */}
+            <div
+              aria-hidden="true"
+              className="
+                absolute inset-0 scale-90
+                rounded-full bg-slate-200
+                blur-3xl opacity-70
+                dark:bg-zinc-800
+              "
+            />
+
+            {/* Decorative ring */}
+            <div
+              aria-hidden="true"
+              className="
+                absolute -inset-3
+                rounded-full
+                border border-slate-200
+                dark:border-zinc-700
+              "
+            />
+
+            {/* Image */}
+            <div
+              className="
+                relative overflow-hidden rounded-full
+                border-4 border-white
+                bg-slate-100
+                shadow-2xl
+                dark:border-zinc-800
+                dark:bg-zinc-900
+              "
+            >
+              <img
+                src={profileImg}
+                alt="Rushikesh Auti - Full Stack Developer"
+                width="420"
+                height="420"
+                fetchPriority="high"
+                decoding="async"
+                className="
+                  h-60 w-60
+                  object-cover
+                  transition-transform duration-500
+                  hover:scale-105
+                  sm:h-72 sm:w-72
+                  md:h-80 md:w-80
+                  lg:h-95 lg:w-95
+                  xl:h-105 xl:w-105
+                "
+              />
+            </div>
           </div>
         </div>
       </div>
