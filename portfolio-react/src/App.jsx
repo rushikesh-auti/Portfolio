@@ -23,15 +23,18 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-950 transition-colors duration-300 dark:bg-[#0a0a0a] dark:text-slate-50">
-      <Header isDark={isDark} onThemeToggle={() => setIsDark((theme) => !theme)} />
+      <Header
+        isDark={isDark}
+        onThemeToggle={() => setIsDark((theme) => !theme)}
+      />
 
-      <main className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-6 xl:px-4">
+      <main className="min-w-0">
         <Hero />
         <About />
         <Skills />
         <Projects />
-        <Contact/>
-        <Footer/>
+        <Contact />
+        <Footer />
       </main>
     </div>
   );
