@@ -59,6 +59,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            {/* View Projects */}
             <a
               href="#projects"
               aria-label="View Rushikesh Auti's projects"
@@ -72,13 +73,15 @@ export default function Hero() {
               />
             </a>
 
+            {/* View Resume */}
             <a
               href={resume}
-              download
-              aria-label="Download Rushikesh Auti's resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Rushikesh Auti's resume"
               className="btn-secondary w-full sm:w-auto"
             >
-              Download Resume
+              View Resume
               <FiExternalLink size={16} aria-hidden="true" />
             </a>
           </div>
@@ -88,6 +91,7 @@ export default function Hero() {
             className="mt-8 flex justify-center gap-3 lg:justify-start"
             aria-label="Social links"
           >
+            {/* GitHub */}
             <a
               href="https://github.com/rushikesh-auti"
               target="_blank"
@@ -113,6 +117,7 @@ export default function Hero() {
               <FaGithub size={19} aria-hidden="true" />
             </a>
 
+            {/* LinkedIn */}
             <a
               href="https://linkedin.com/in/rushikesh-auti"
               target="_blank"
@@ -138,6 +143,7 @@ export default function Hero() {
               <FaLinkedin size={19} aria-hidden="true" />
             </a>
 
+            {/* Email */}
             <a
               href="mailto:autirushikesh758@gmail.com"
               aria-label="Send an email to Rushikesh Auti"
