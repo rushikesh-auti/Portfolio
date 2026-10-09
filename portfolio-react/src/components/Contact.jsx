@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { emailJsConfig, isEmailJsConfigured } from "../config/emailjs";
 
 import {
   FaEnvelope,
@@ -19,6 +20,7 @@ const initialErrors = {
 
 export default function Contact() {
   const formRef = useRef(null);
+  const sendingRef = useRef(false);
 
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState("");
@@ -68,7 +70,7 @@ export default function Contact() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    if (!formRef.current) return;
+    if (!formRef.current || sendingRef.current) return;
 
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
@@ -82,15 +84,22 @@ export default function Contact() {
       return;
     }
 
+    sendingRef.current = true;
     setIsSending(true);
 
     try {
+      if (!isEmailJsConfigured) {
+        throw new Error(
+          "EmailJS is not configured. Set the required VITE_EMAILJS environment variables.",
+        );
+      }
+
       await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
         formRef.current,
         {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          publicKey: emailJsConfig.publicKey,
         },
       );
 
@@ -101,6 +110,7 @@ export default function Contact() {
       console.error("EmailJS Error:", error);
       setStatus("error");
     } finally {
+      sendingRef.current = false;
       setIsSending(false);
     }
   };
@@ -267,6 +277,7 @@ export default function Contact() {
             <form
               ref={formRef}
               onSubmit={sendEmail}
+              onChange={() => setStatus("")}
               noValidate
               className="mt-7 space-y-5"
             >
