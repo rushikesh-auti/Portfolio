@@ -70,6 +70,7 @@ export default function Contact() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
+    // Prevent duplicate requests even before React updates the button state.
     if (!formRef.current || sendingRef.current) return;
 
     const formData = new FormData(formRef.current);
@@ -80,34 +81,49 @@ export default function Contact() {
     setErrors(validationErrors);
     setStatus("");
 
-    if (Object.keys(validationErrors).length > 0) {
+    if (Object.keys(validationErrors).length > 0) return;
+
+    // Vite needs these variables set during the Vercel build.
+    if (!isEmailJsConfigured) {
+      console.error("EmailJS is missing one or more VITE_EMAILJS_* settings.");
+      setStatus("configuration-error");
       return;
     }
+
+    const name = data.name.trim();
+    const email = data.email.trim();
+    const subject = data.subject.trim();
+    const message = data.message.trim();
 
     sendingRef.current = true;
     setIsSending(true);
 
     try {
-      if (!isEmailJsConfigured) {
-        throw new Error(
-          "EmailJS is not configured. Set the required VITE_EMAILJS environment variables.",
-        );
-      }
-
-      await emailjs.sendForm(
+      await emailjs.send(
         emailJsConfig.serviceId,
         emailJsConfig.templateId,
-        formRef.current,
         {
-          publicKey: emailJsConfig.publicKey,
+          // Both the existing field names and common EmailJS template names.
+          name,
+          email,
+          subject,
+          message,
+          from_name: name,
+          from_email: email,
+          reply_to: email,
+          user_name: name,
+          user_email: email,
+          title: subject,
         },
+        { publicKey: emailJsConfig.publicKey },
       );
 
       setStatus("success");
       setErrors(initialErrors);
-      formRef.current.reset();
+      formRef.current?.reset();
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("EmailJS Error Status:", error?.status);
+      console.error("EmailJS Error Message:", error?.text);
       setStatus("error");
     } finally {
       sendingRef.current = false;
@@ -277,7 +293,6 @@ export default function Contact() {
             <form
               ref={formRef}
               onSubmit={sendEmail}
-              onChange={() => setStatus("")}
               noValidate
               className="mt-7 space-y-5"
             >
@@ -459,6 +474,20 @@ export default function Contact() {
                       Please try again or contact me directly by email.
                     </p>
                   </div>
+                </div>
+              )}
+
+              {/* Missing EmailJS configuration */}
+              {status === "configuration-error" && (
+                <div
+                  role="alert"
+                  className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900/50 dark:bg-red-950/30 dark:text-red-400"
+                >
+                  <AlertCircle className="mt-0.5 shrink-0" size={18} />
+                  <p>
+                    The contact form is temporarily unavailable. Please contact
+                    me directly by email.
+                  </p>
                 </div>
               )}
 
