@@ -12,14 +12,14 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="scroll-mt-15 bg-slate-50 py-5 sm:py-5 lg:py-5"
+      className="scroll-mt-15 bg-slate-50 py-14 sm:py-16 lg:py-10"
     >
       <div className="section-shell">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
           <h2
             id="about-title"
-            className="mt-5 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
           >
             Building modern web experiences
           </h2>
