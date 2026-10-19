@@ -8,7 +8,7 @@ export default function Hero() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="relative flex min-h-[calc(100vh-4.5rem)] scroll-mt-15 items-center overflow-hidden py-16 sm:py-16 lg:py-16"
+      className="relative flex min-h-[calc(100vh-4.5rem)] scroll-mt-15 items-center overflow-hidden py-16 sm:py-15 lg:py-15"
     >
       <div className="section-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 xl:gap-20">
         {/* Content */}
@@ -37,24 +37,20 @@ export default function Hero() {
           </h1>
 
           {/* Role */}
-          <div className="mt-5">
-            <p className="text-lg font-semibold text-slate-700 dark:text-slate-300 sm:text-xl md:text-2xl">
+          <div className="mt-5 flex flex-col items-center gap-2 lg:items-start">
+            <p className="rounded-lg bg-slate-100 px-3 py-1.5 text-lg font-semibold text-slate-700 dark:bg-zinc-900 dark:text-slate-300 sm:text-xl md:text-2xl">
               Full Stack Developer
-            </p>
-
-            <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-500 sm:text-base">
-              React.js · Node.js · Express.js · MongoDB
             </p>
           </div>
 
           {/* Description */}
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg sm:leading-8 lg:mx-0">
-            I build{" "}
+            I turn ideas into{" "}
             <strong className="font-semibold text-slate-900 dark:text-slate-200">
-              responsive and user-focused web applications
-            </strong>{" "}
-            with modern technologies. I focus on clean UI, reliable backend
-            systems, performance, accessibility, and maintainable code.
+              thoughtful, user-friendly web applications
+            </strong>
+            , combining clean code with dependable full-stack functionality to
+            create digital experiences that make a difference.
           </p>
 
           {/* CTA Buttons */}
