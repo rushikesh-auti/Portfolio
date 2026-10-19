@@ -26,13 +26,13 @@ export default function Certifications() {
     <section
       id="certifications"
       aria-labelledby="certifications-title"
-      className="scroll-mt-15 bg-slate-50 py-5 sm:py-5 lg:py-5"
+      className="scroll-mt-15 bg-white py-14 sm:py-16 lg:py-17"
     >
       <div className="section-shell">
         <div className="mx-auto max-w-3xl text-center">
           <h2
             id="certifications-title"
-            className="mt-5 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
           >
             Certifications
           </h2>
