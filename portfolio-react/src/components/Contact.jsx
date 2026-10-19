@@ -142,14 +142,14 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="scroll-mt-15 bg-slate-50 py-5 sm:py-5 lg:py-5"
+      className="scroll-mt-15 bg-slate-50 py-14 sm:py-16 lg:py-10"
     >
       <div className="section-shell">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="contact-title"
-            className="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
           >
             Let&apos;s work together
           </h2>
