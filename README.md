@@ -1,115 +1,70 @@
-# Personal Portfolio Website
+# Personal Portfolio
 
-A modern and responsive personal portfolio website built with **React, Vite, and Tailwind CSS**. The portfolio showcases my technical skills, featured projects, education, resume, and professional contact information.
+A responsive portfolio website built with React, Vite, and Tailwind CSS. It
+showcases selected projects, technical skills, education, certifications, and
+contact information, with a theme toggle and an EmailJS-powered contact form.
 
-## Live Demo
-
-https://portfoliorushiz.vercel.app
-
-## Overview
-
-This portfolio serves as a central place to showcase my software development skills, projects, education, and professional background.
-
-The design focuses on a clean and minimal user interface, responsive layouts, accessibility, and a smooth user experience across desktop, tablet, and mobile devices.
+**Live site:** [rushikeshauti.vercel.app](https://rushikeshauti.vercel.app)
 
 ## Features
 
-- Responsive design for desktop, tablet, and mobile devices
-- Modern and clean user interface
-- Responsive navigation with mobile hamburger menu
-- Dark and light mode
-- Persistent theme preference using localStorage
-- Professional hero section
-- About section with education details
-- Technical skills section with technology icons
-- Featured projects with GitHub and live demo links
-- Resume view and download functionality
-- Contact form integrated with EmailJS
-- Contact information with GitHub and LinkedIn links
-- Interactive hover and transition effects
-- Component-based React architecture
+- Responsive layout and navigation for desktop, tablet, and mobile
+- Light theme by default, dark theme toggle, and saved theme preference
+- Hero, About, Skills, Projects, Certifications, and Contact sections
+- Project cards linking to live demos and GitHub repositories
+- Certificate verification links
+- Resume viewing and download
+- Contact form powered by EmailJS
+- Accessible focus styles and reduced-motion support
 
-## Technologies
+## Technology stack
 
-- React
-- Vite
-- JavaScript
-- Tailwind CSS
-- React Icons
-- Lucide React
-- EmailJS
+| Area | Technologies |
+| --- | --- |
+| UI | React, JavaScript, Tailwind CSS |
+| Build tooling | Vite |
+| Icons | Lucide React, React Icons |
+| Contact form | EmailJS |
+| Hosting | Vercel |
 
-## Project Structure
+## Project structure
 
 ```text
 Portfolio/
-│
-├── public/
-│
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   │   └── profile.jpg
-│   │   │
-│   │   └── resume/
-│   │       └── Rushikesh_Auti_Resume.pdf
-│   │
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   │
-│   ├── config/
-│   │   └── emailjs.js
-│   │
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-│
-├── .gitignore
-├── index.html
-├── package.json
-├── vite.config.js
+├── old-portfolio/                 # Previous static portfolio
+├── portfolio-react/               # Active React application
+│   ├── public/                    # Static assets and site metadata
+│   ├── src/
+│   │   ├── assets/                # Profile image and resume
+│   │   ├── components/            # Page sections and shared UI
+│   │   ├── config/                # EmailJS configuration
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
 └── README.md
 ```
 
-## Preview
+## Run locally
 
-### Light Mode
-
-<img width="1902" height="911" alt="image" src="https://github.com/user-attachments/assets/3eeb5341-903f-4600-bfe2-718a59fd05c3" />
-
-### Dark Mode
-
-<img width="1882" height="891" alt="image" src="https://github.com/user-attachments/assets/0790f83e-5532-41d1-a307-8184158e8409" />
-
-## Running the Project Locally
-
-### 1. Clone the Repository
+Requirements: Node.js and npm.
 
 ```bash
 git clone https://github.com/rushikesh-auti/Portfolio.git
-```
-
-### 2. Navigate to the React Project
-
-```bash
 cd Portfolio/portfolio-react
-```
-
-### 3. Install Dependencies
-
-```bash
 npm install
+npm run dev
 ```
 
-### 4. Configure Environment Variables
+Vite prints the local development URL in the terminal (typically
+`http://localhost:5173`).
 
-Create a `.env` file inside the `portfolio-react` directory:
+## EmailJS configuration
+
+Create a `.env` file in `portfolio-react` and provide the EmailJS service ID,
+template ID, and public key:
 
 ```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
@@ -117,38 +72,36 @@ VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-### 5. Start the Development Server
+These `VITE_` values are included in the browser bundle. Use only the EmailJS
+public key; never expose an EmailJS private key in client-side code.
+
+## Build and lint
+
+Run from `portfolio-react`:
 
 ```bash
-npm run dev
-```
-
-The application will run at:
-
-```text
-http://localhost:5173
-```
-
-## Build for Production
-
-To create a production build:
-
-```bash
+npm run lint
 npm run build
-```
-
-To preview the production build locally:
-
-```bash
 npm run preview
 ```
 
-## Environment Variables
+## Deployment
 
-The project uses the following environment variables for EmailJS:
+The site is deployed on Vercel. Set the Vercel project root directory to
+`portfolio-react` and configure the three EmailJS environment variables in the
+Vercel project settings. Redeploy after changing the variables because Vite
+reads them during the build.
 
-| Variable                   | Description         |
-| -------------------------- | ------------------- |
-| `VITE_EMAILJS_SERVICE_ID`  | EmailJS service ID  |
-| `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
-| `VITE_EMAILJS_PUBLIC_KEY`  | EmailJS public key  |
+## Preview
+
+### Light theme
+
+<img width="1917" height="911" alt="Portfolio website in light theme" src="https://github.com/user-attachments/assets/87956b71-99a2-454e-b690-abb091ad4d4c" />
+
+### Dark theme
+
+<img width="1902" height="906" alt="Portfolio website in dark theme" src="https://github.com/user-attachments/assets/c8000459-0ea9-4c1f-952c-907c57254b8d" />
+
+## Developer
+
+**Rushikesh Auti**
