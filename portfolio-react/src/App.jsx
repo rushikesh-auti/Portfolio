@@ -14,7 +14,7 @@ export default function App() {
 
     if (savedTheme) return savedTheme === "dark";
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return false;
   });
 
   useEffect(() => {
