@@ -6,8 +6,15 @@ export default function Projects() {
     {
       title: "StyleKart",
       description:
-        "Full-stack fashion e-commerce application with product management, category-based browsing, search, cart and wishlist functionality, Redux state management, REST APIs, and MongoDB integration.",
-      tech: ["React", "Redux", "Node.js", "Express", "MongoDB"],
+        "Fashion store with product search, cart and wishlist, Razorpay payments, and order management. Includes role-based authentication, REST APIs, and Cloudinary image uploads.",
+      tech: [
+        "React.js",
+        "Redux",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Razorpay",
+      ],
       github: "https://github.com/rushikesh-auti/StyleKart",
       live: "https://stylekart-store.vercel.app/",
     },
@@ -64,14 +71,14 @@ export default function Projects() {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="scroll-mt-15 bg-slate-50 py-5 sm:py-5 lg:py-5"
+      className="scroll-mt-15 bg-slate-50 py-14 sm:py-16 lg:py-10"
     >
       <div className="section-shell">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
           <h2
             id="projects-title"
-            className="mt-5 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl "
+            className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"
           >
             Featured Projects
           </h2>
