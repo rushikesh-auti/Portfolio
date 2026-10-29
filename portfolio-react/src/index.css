@@ -368,19 +368,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-link::after,
-  .surface-card-hover,
-  .btn-primary,
-  .btn-secondary,
-  .project-tech,
-  .project-live,
-  .project-github {
-    transition: none;
+  html {
+    scroll-behavior: auto !important;
   }
 
-  .surface-card-hover:hover,
-  .btn-primary:hover,
-  .btn-secondary:hover {
-    transform: none;
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
   }
 }

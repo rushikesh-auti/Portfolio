@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /login
-Disallow: /dashboard
 
 Sitemap: https://rushikeshauti.vercel.app/sitemap.xml

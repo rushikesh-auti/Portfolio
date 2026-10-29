@@ -1,4 +1,5 @@
-import profileImg from "../assets/images/profile.jpg";
+import profileImg from "../assets/images/profile-840.webp";
+import profileImg480 from "../assets/images/profile-480.webp";
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
@@ -29,7 +30,7 @@ export default function Hero() {
             id="hero-title"
             className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl lg:text-[64px]"
           >
-            Hi, I'm
+            Hi, I&apos;m
             <br />
             <span className="text-slate-900 dark:text-white">
               Rushikesh Auti
@@ -45,12 +46,9 @@ export default function Hero() {
 
           {/* Description */}
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg sm:leading-8 lg:mx-0">
-            I turn ideas into{" "}
-            <strong className="font-semibold text-slate-900 dark:text-slate-200">
-              thoughtful, user-friendly web applications
-            </strong>
-            , combining clean code with dependable full-stack functionality to
-            create digital experiences that make a difference.
+            I build responsive full-stack web applications with React,
+            Node.js, Express, and MongoDB, focusing on accessible interfaces,
+            maintainable code, and reliable end-to-end features.
           </p>
 
           {/* CTA Buttons */}
@@ -203,6 +201,8 @@ export default function Hero() {
             >
               <img
                 src={profileImg}
+                srcSet={`${profileImg480} 480w, ${profileImg} 840w`}
+                sizes="(min-width: 1280px) 420px, (min-width: 1024px) 380px, (min-width: 768px) 320px, (min-width: 640px) 288px, 240px"
                 alt="Rushikesh Auti - Full Stack Developer"
                 width="420"
                 height="420"

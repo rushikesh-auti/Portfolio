@@ -55,7 +55,6 @@ export default function Projects() {
         "Responsive React-based social media interface where users can view posts, create content, and interact with posts through a clean and responsive user interface.",
       tech: ["React", "JavaScript", "CSS"],
       github: "https://github.com/rushikesh-auti/Social-Media-Interface",
-      live: "https://github.com/rushikesh-auti/Social-Media-Interface",
     },
     {
       title: "Calculator",
@@ -181,9 +180,9 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`View ${project.title} source code on GitHub`}
-                  className="
+                  className={`
                     project-github
-                    inline-flex flex-1 items-center
+                    inline-flex ${project.live ? "flex-1" : "w-full"} items-center
                     justify-center gap-2
                     rounded-xl border border-slate-300
                     bg-white px-4 py-2.5
@@ -194,7 +193,7 @@ export default function Projects() {
                     hover:bg-slate-50
                     hover:text-slate-950
                     dark:hover:border-slate-600 dark:hover:bg-slate-700 dark:hover:text-white
-                  "
+                  `}
                 >
                   GitHub
                   <FaGithub size={16} aria-hidden="true" />

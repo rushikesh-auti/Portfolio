@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Download, Moon, Sun, Menu, X } from "lucide-react";
 
 import resume from "../assets/resume/Rushikesh_Auti_Resume.pdf";
@@ -14,9 +14,14 @@ const navLinks = [
 
 function Header({ isDark, onThemeToggle }) {
   const [isOpen, setIsOpen] = useState(false);
+  const menuToggleRef = useRef(null);
 
   const closeMenu = () => {
     setIsOpen(false);
+
+    if (isOpen) {
+      window.setTimeout(() => menuToggleRef.current?.focus(), 0);
+    }
   };
 
   return (
@@ -86,6 +91,7 @@ function Header({ isDark, onThemeToggle }) {
 
           {/* Menu Toggle */}
           <button
+            ref={menuToggleRef}
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
             aria-expanded={isOpen}
@@ -103,6 +109,7 @@ function Header({ isDark, onThemeToggle }) {
       {/* Mobile Navigation */}
       <div
         id="mobile-navigation"
+        inert={!isOpen}
         className={`overflow-hidden border-t border-slate-200 bg-white transition-all duration-300 lg:hidden dark:border-zinc-800 dark:bg-[#0a0a0a] ${
           isOpen ? "max-h-125 opacity-100" : "max-h-0 border-t-0 opacity-0"
         }`}
